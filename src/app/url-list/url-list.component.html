@@ -1,0 +1,14 @@
+<div class="w-full h-full flex flex-wrap flex-col">
+    <div class="mx-auto">
+        <h1 class="font-bold text-xl">Here is a compiled list of URLs for all the items in your shopping cart!</h1>
+    </div>
+    <div>
+        <div *ngFor="let item of itemsInCart" class="pl-10">
+            <li class="font-bold text-lg">{{item.title}}</li>
+            <a class="ml-5" href="{{item.url}}">{{item.url}}</a>
+        </div>
+        <div *ngIf="itemsInCart.length === 0"  class="mt-20">
+            <h1 class="text-center text-lg">There are no items in the cart...</h1>
+        </div>
+    </div>
+</div>

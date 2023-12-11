@@ -1,0 +1,12 @@
+<div *ngIf="item" class="flex justify-center flex-col">
+    <div class="mx-auto text-center w-64 mt-4">
+        <h1 class="text-xl font-bold">{{item.title}}</h1>
+        <ul>
+            <li class="mt-4"><span class="font-bold">Price:</span> {{item.price}}</li>
+            <li class="mt-4"><span class="font-bold">URL:</span> <a href="{{item.url}}">{{item.url}}</a></li>
+        </ul>
+        <p class="mt-4">{{item.description}}</p>
+        <button class=" mt-4 font-bold py-2 px-3 rounded-xl border border-black hover:text-white hover:bg-black w-24" (click)="addToCart(item)">Add Item</button>
+    </div>
+    
+</div>

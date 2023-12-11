@@ -1,0 +1,16 @@
+<div>
+    <div class="rounded-md border-black pb-10 border-2 w-96 mx-auto">
+        <div class="bg-black text-white font-bold text-2xl flex justify-center py-8">
+            <h1>Shopping Cart</h1>
+        </div>
+        <div *ngFor="let concert of itemsInCart" class="rounded-md border-black p-5 mx-auto my-5 border-2 w-64 overflow-auto">
+            <h1 class="text-lg font-bold text-center">{{concert.title}}</h1>
+           <span class="font-bold">Price:</span> {{concert.price}}
+        </div>
+        <div *ngIf="totalCost === 0" class="ml-28 mt-5 ">
+            <h1 class="text-xl">No Items In Cart...</h1>
+        </div>
+        <div class="mt-5"><span class="ml-28 text-xl">Estimated Total: {{totalCost}}</span></div>
+    </div>
+    
+</div>
