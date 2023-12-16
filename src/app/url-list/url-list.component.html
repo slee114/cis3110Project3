@@ -5,7 +5,7 @@
     <div>
         <div *ngFor="let item of itemsInCart" class="pl-10">
             <li class="font-bold text-lg">{{item.title}}</li>
-            <a class="ml-5" href="{{item.url}}">{{item.url}}</a>
+            <a class="ml-5" target="_blank" href="{{item.url}}">{{item.url}}</a>
         </div>
         <div *ngIf="itemsInCart.length === 0"  class="mt-20">
             <h1 class="text-center text-lg">There are no items in the cart...</h1>
